@@ -1,19 +1,28 @@
 import { useState, useEffect } from 'react';
-import { Form } from './style';
+import { DIV, BODY } from './style';
 import Link from 'next/link';
-
+// background-size: 알아보기 깨지는걸 방지
 const Main = () => {
     return (
         <>
-            <Form>
-                <h3>메인 페이지</h3>
-                <button>
-                    <Link href='/login'>로그인</Link>
-                </button>
-                <button>
-                    <Link href='/signup'>회원가입</Link>
-                </button>
-            </Form>
+            <BODY>
+                <DIV>
+                    <img
+                        src='/images/test.jpg'
+                        width='300'
+                        height='200'
+                        alt='My Image'
+                        className='title'
+                    ></img>
+                    <h3>MBTI 테스트</h3>
+                    <img src='/images/test.jpg' width='300' height='200'></img>
+                    <li>
+                        <Link href='/question'>
+                            <button>나는 어떤 놀이기구 일까?</button>
+                        </Link>
+                    </li>
+                </DIV>
+            </BODY>
         </>
     );
 };
