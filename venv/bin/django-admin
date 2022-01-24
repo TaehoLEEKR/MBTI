@@ -1,4 +1,4 @@
-#!/workspace/MBTI/venv/bin/python3
+#!/workspace/MBTI2/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
