@@ -21,7 +21,6 @@ def test(request):
     for k in range(2,len(words)+1,2):
         keywords_revers.append(Sep_models.objects.get(id=k).Sep)
         
-    #print(keywords,'\n',keywords_revers)
     
     for n in range(1,ques+1): # post 체크
         stack_res.append((request.POST[f'question--{n}'][0])) # post 받은 데이터 배얼에 append
