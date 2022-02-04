@@ -1,0 +1,541 @@
+[
+{
+    "model": "main.questions",
+    "pk": 1,
+    "fields": {
+        "Number": 1,
+        "Content": "백만년만에 휴일이 생겼다!! 뭐하고 보낼까!?"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 2,
+    "fields": {
+        "Number": 2,
+        "Content": "친구들이 놀이동산을 가자고 하네 ? 지금 나의 심정은?"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 3,
+    "fields": {
+        "Number": 3,
+        "Content": "놀이동산 전 날 나의 모습은?"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 4,
+    "fields": {
+        "Number": 4,
+        "Content": "관람차를 타고 정상에 올라갔다!"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 5,
+    "fields": {
+        "Number": 5,
+        "Content": "돌아다니다가 혼자 울고 있는 아이를 발견했다면?"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 6,
+    "fields": {
+        "Number": 6,
+        "Content": "무섭기로 악명이 높은 놀이기구를 타러 가는 길.."
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 7,
+    "fields": {
+        "Number": 7,
+        "Content": "줄을 기다리면서 친구가 놀이기구에 대해 설명해준다면?"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 8,
+    "fields": {
+        "Number": 8,
+        "Content": "예약해놓은 기구가 있는데 퍼레이드 시간과 겹친다면?"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 9,
+    "fields": {
+        "Number": 9,
+        "Content": "매점에서 지갑 분실사건 범인이 나로 몰렸다.. 나라면?"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 10,
+    "fields": {
+        "Number": 10,
+        "Content": "재밌게 놀고 난 후에 급 2차로 놀자는 친구들 나의 선택은?"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 11,
+    "fields": {
+        "Number": 11,
+        "Content": "2차 장소를 어디로 가지?"
+    }
+},
+{
+    "model": "main.questions",
+    "pk": 12,
+    "fields": {
+        "Number": 12,
+        "Content": "2차갔는데 친구의 친구를 만났다. 합석 할래??"
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 1,
+    "fields": {
+        "Content": "친구들과 약속을 잡고 놀러 나가는게 맞지!",
+        "FK_Questions_id": 1,
+        "FK_Sep": 1
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 2,
+    "fields": {
+        "Content": "약속은 무슨 약속이야 넷플릭스 밀린거나 봐야지~",
+        "FK_Questions_id": 1,
+        "FK_Sep": 2
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 3,
+    "fields": {
+        "Content": "꺄르르 너무 재밌을 것 같아 설레서 잠을 못 이루겠는걸",
+        "FK_Questions_id": 2,
+        "FK_Sep": 1
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 4,
+    "fields": {
+        "Content": "좋긴한데 흠...(귀찮아)",
+        "FK_Questions_id": 2,
+        "FK_Sep": 2
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 5,
+    "fields": {
+        "Content": "무엇을 타고 언제 밥을 먹을지 미리 조사할래",
+        "FK_Questions_id": 3,
+        "FK_Sep": 7
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 6,
+    "fields": {
+        "Content": "내가 가장 튀어야해! 쇼핑 가자",
+        "FK_Questions_id": 3,
+        "FK_Sep": 8
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 7,
+    "fields": {
+        "Content": "와 날씨 직이네",
+        "FK_Questions_id": 4,
+        "FK_Sep": 3
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 8,
+    "fields": {
+        "Content": "갑자기 멈추면 어떻게 탈출하지? 대탈출 이라도 봐둘걸 그랬나..?",
+        "FK_Questions_id": 4,
+        "FK_Sep": 4
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 9,
+    "fields": {
+        "Content": "우리가 직접 엄빠를 찾아주자!",
+        "FK_Questions_id": 5,
+        "FK_Sep": 6
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 10,
+    "fields": {
+        "Content": "미아보호소에 데려가자 그게 현명한 선택일듯 해",
+        "FK_Questions_id": 5,
+        "FK_Sep": 5
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 11,
+    "fields": {
+        "Content": "안가 그거 대기 할 시간에 그냥 다른거 두 개 타자",
+        "FK_Questions_id": 6,
+        "FK_Sep": 3
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 12,
+    "fields": {
+        "Content": "이거 안타면 놀이공원 온게 아니야~",
+        "FK_Questions_id": 6,
+        "FK_Sep": 4
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 13,
+    "fields": {
+        "Content": "감탄하면서 설명을 듣는다",
+        "FK_Questions_id": 7,
+        "FK_Sep": 5
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 14,
+    "fields": {
+        "Content": "어쩔티비~ 저 앞에 츄러스 맛있겠다..",
+        "FK_Questions_id": 7,
+        "FK_Sep": 6
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 15,
+    "fields": {
+        "Content": "퍼레이드는 못 참지!~ 그냥 보고 다시 예약할래~",
+        "FK_Questions_id": 8,
+        "FK_Sep": 8
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 16,
+    "fields": {
+        "Content": "아니야 놀이기구는 못 참지!~ 예약해 놓은거 타러가자",
+        "FK_Questions_id": 8,
+        "FK_Sep": 7
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 17,
+    "fields": {
+        "Content": "예약시간을 보여주며 논리적으로 설명한다",
+        "FK_Questions_id": 9,
+        "FK_Sep": 5
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 18,
+    "fields": {
+        "Content": "저 아니에효! 당황해서 눈물이 다 나네",
+        "FK_Questions_id": 9,
+        "FK_Sep": 6
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 19,
+    "fields": {
+        "Content": "나 피곤행 안 갈래 집 가서 할 일이 많으니 안 간다",
+        "FK_Questions_id": 10,
+        "FK_Sep": 7
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 20,
+    "fields": {
+        "Content": "빠꾸없지 무조건 가~!",
+        "FK_Questions_id": 10,
+        "FK_Sep": 8
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 21,
+    "fields": {
+        "Content": "유리부터 반짝 거리는 새로 오픈한 곳",
+        "FK_Questions_id": 11,
+        "FK_Sep": 4
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 22,
+    "fields": {
+        "Content": "어느 동네를 가도 있을법한 그런 곳",
+        "FK_Questions_id": 11,
+        "FK_Sep": 3
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 23,
+    "fields": {
+        "Content": "오는 사람 거절하지 않는다구~! 좋다 환영",
+        "FK_Questions_id": 12,
+        "FK_Sep": 1
+    }
+},
+{
+    "model": "main.choice",
+    "pk": 24,
+    "fields": {
+        "Content": "시렁궁시렁시렁궁시렁 부끄러워",
+        "FK_Questions_id": 12,
+        "FK_Sep": 2
+    }
+},
+{
+    "model": "main.sep_models",
+    "pk": 1,
+    "fields": {
+        "Sep": "E"
+    }
+},
+{
+    "model": "main.sep_models",
+    "pk": 2,
+    "fields": {
+        "Sep": "I"
+    }
+},
+{
+    "model": "main.sep_models",
+    "pk": 3,
+    "fields": {
+        "Sep": "S"
+    }
+},
+{
+    "model": "main.sep_models",
+    "pk": 4,
+    "fields": {
+        "Sep": "N"
+    }
+},
+{
+    "model": "main.sep_models",
+    "pk": 5,
+    "fields": {
+        "Sep": "T"
+    }
+},
+{
+    "model": "main.sep_models",
+    "pk": 6,
+    "fields": {
+        "Sep": "F"
+    }
+},
+{
+    "model": "main.sep_models",
+    "pk": 7,
+    "fields": {
+        "Sep": "J"
+    }
+},
+{
+    "model": "main.sep_models",
+    "pk": 8,
+    "fields": {
+        "Sep": "P"
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 1,
+    "fields": {
+        "Name": "ENFP",
+        "Cnt": 0,
+        "Data_res": {
+             "title":" 원!! 투 아마존~ 웰컴투컴투 멍!",
+             "Animal" : "시바견",
+             "Rides": "아마존",
+             "features_Rides": [
+                "강력한 도전정신으로 새로운 일에 도전하는 것을 좋아해요.",
+                "관심을 갖고 있는 일들이 너무나 많아서 마무리를 못할 때도 있지요.",
+                "갑작스러운 변화로 종종 가까이에 있는 친구들이나 지인들을 놀라게 해요"
+            ],
+            "descriptions_Animal": [
+                "공감능력과 사교성이 강해 친구들 사이에서 분위기메이커로 통해요,",
+                "새로운 친구를 사귈때 즐거움과 행복을 느낀답니다.",
+              	"당신이 사랑을 위해, 꿈을 위해서 기꺼이 바보가 될 준비가 되어있습니다.",
+              	"아이디어 하나로 세상을 바꿀 준비가 되었답니다."
+            ],
+            "contrary": {
+                "frendly_un": [
+                    {
+                        "name": "INFP",
+                        "img": "img/Rides/Animal/구름빵 타는 다람쥐.png"
+                    },
+                    {
+                      "name": "ISFP",
+                        "img": "img/Rides/Animal/피터팬 타는 고양이.png"
+                    }
+                ]
+            }
+        }
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 2,
+    "fields": {
+        "Name": "ENFJ",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 3,
+    "fields": {
+        "Name": "ENTP",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 4,
+    "fields": {
+        "Name": "ENTJ",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 5,
+    "fields": {
+        "Name": "ESFP",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 6,
+    "fields": {
+        "Name": "ESFJ",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 7,
+    "fields": {
+        "Name": "ESTP",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 8,
+    "fields": {
+        "Name": "ESTJ",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 9,
+    "fields": {
+        "Name": "INFP",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 10,
+    "fields": {
+        "Name": "INFJ",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 11,
+    "fields": {
+        "Name": "INTP",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 12,
+    "fields": {
+        "Name": "INTJ",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 13,
+    "fields": {
+        "Name": "ISFP",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 14,
+    "fields": {
+        "Name": "ISFJ",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 15,
+    "fields": {
+        "Name": "ISTP",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+},
+{
+    "model": "main.mbti_res",
+    "pk": 16,
+    "fields": {
+        "Name": "ISTJ",
+        "Cnt": 0,
+        "Data_res": 1
+    }
+}
+]

@@ -26,9 +26,8 @@ class Sep_models(models.Model):
     
 class MBTI_Res(models.Model):
     Name = models.CharField(max_length=50)
-    Animal = models.CharField(max_length=100)
-    Rides = models.CharField(max_length=100)
     Cnt = models.IntegerField(default=0)
+    Data_res = models.JSONField() 
     
     def __str__(self):
         return f'{self.Name}'

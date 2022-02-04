@@ -6,6 +6,24 @@
 </head>
 <body>
    POST : {{stack_res}} <br> <hr>
-    RESULT : {{res_str}}
-</body>
+    RESULT : {{res_str}} ||  Count : {{ Cnt_show }} <br> <hr>
+    Data : {{ data_res.title }} <br> <hr>
+    Animal : {{data_res.Animal}} <br> <hr>
+    Rides : {{data_res.Rides}}<br> <hr>
+   features <br>
+    {% for fea in data_res.features_Rides %}
+            {{fea}} <br>
+    {%endfor%}
+    <hr>
+    descriptions_Animal  <br>
+    {% for desc in data_res.descriptions_Animal %}
+            {{desc}} <br>
+    {%endfor%} <hr>
+    {% for con in data_res.contrary.frendly_un %}
+            {{con.name}}<br>{{con.img}} <br>
+    {%endfor%}
+    
+ 
+
+</body> 
 </html>

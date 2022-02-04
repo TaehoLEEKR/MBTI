@@ -5,7 +5,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/test/" method = 'post' > 
+    <form action="/test" method = 'post' > 
         {% csrf_token %}
         {% for question in questions %}
             <h3> {{ question.Number }}번. {{question.Content }} </h3> <hr>

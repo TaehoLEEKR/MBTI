@@ -1,15 +1,19 @@
 from django.shortcuts import render
 from .models import Questions , Choice , Sep_models, MBTI_Res
-
+#1 1 2 2 1 2 2 1 2 2 1 1
 
 def test(request):
     ques = Questions.objects.count()
     words = Sep_models.objects.all()
-    keywords = []
-    keywords_revers = []
-    slice_cnt = []
-    stack_res=[]
-    res_str = ""
+    MBTI_DATA = MBTI_Res.objects.all()
+    
+    keywords = [] # 4글자 구분할 키워드
+    keywords_revers = [] # 
+    slice_cnt = [] # 카운팅 계산
+    stack_res=[] # Post 결과 저장
+    res_str = "" # 최종결과 
+    Cnt = 0
+    Cnt_show = 0
     
     for c in range(1,len(words),2):
         keywords.append(Sep_models.objects.get(id=c).Sep)
@@ -17,26 +21,33 @@ def test(request):
     for k in range(2,len(words)+1,2):
         keywords_revers.append(Sep_models.objects.get(id=k).Sep)
         
-    print(keywords,'\n',keywords_revers)
+    #print(keywords,'\n',keywords_revers)
     
     for n in range(1,ques+1): # post 체크
-        stack_res.append((request.POST[f'question--{n}'][0]))
+        stack_res.append((request.POST[f'question--{n}'][0])) # post 받은 데이터 배얼에 append
         
     for i in range(0,len(keywords)):
         slice_cnt.append((stack_res.count(keywords[i])))
         
-    print(slice_cnt)
+    #print(slice_cnt)
     for res in range(0,len(slice_cnt)):
         if slice_cnt[res] >=2 : 
             res_str += keywords[res]
         else:
             res_str += keywords_revers[res]
-        
-    print(f'POST : {request.POST}')
-    
-    print(stack_res)
-    print(res_str)
+    for data in range(0,len(MBTI_DATA)):
+        Cnt = MBTI_Res.objects.get(pk=data+1)
+        if res_str == MBTI_DATA[data].Name:
+            #print(MBTI_DATA[data].Data_res)
+            data_res = MBTI_DATA[data].Data_res
+            Cnt.Cnt +=1
+            Cnt_show=Cnt.Cnt
+            Cnt.save()            
+        #print(data_res)
     context = {
+        'MBTI_DATA' : MBTI_DATA,
+        'Cnt_show' : Cnt_show,
+        'data_res' : data_res,
         'stack_res' : stack_res,
         'res_str' : res_str,
     }
@@ -57,6 +68,7 @@ def index(request):
     
     context = {
         'Cnt_mb' : Cnt_mb,
+        'mbti_res' : mbti_res,
     }
         
     

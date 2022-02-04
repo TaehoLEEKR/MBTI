@@ -17,12 +17,15 @@
                     <h3>MBTI 테스트</h3>
                     <!-- <img src='/images/test.jpg' width='300' height='200'></img> -->
                     <li>
-                        <Link href='/form.html'>
+                        <Link href='/form'>
                             <button>나는 어떤 놀이기구 일까?</button>
                         </Link>
                     </li>
         <p>
-            {{ Cnt_mb }}
+             참여수 {{ Cnt_mb }} <br>
+             {% for res in mbti_res %}
+                {{res.Name}} : {{res.Cnt}} <br>
+            {%endfor%}
          </p>
  
     </div>
