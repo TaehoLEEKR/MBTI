@@ -1,5 +1,7 @@
 import styled from 'styled-Components';
 
+export const Form = styled.form``;
+
 export const BODY = styled.div`
     background-color: #ebe4e4;
 `;
@@ -13,14 +15,13 @@ export const DIV = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #34ebcc;
-    .title {
-        margin-top: -200px;
-    }
+
     h3 {
         color: red;
     }
     h2 {
         margin-top: -200px;
+        text-align: center;
     }
     button {
         margin-top: 100px;
@@ -42,18 +43,25 @@ export const DIV = styled.div`
     .Question {
         text-align: center;
     }
-    .Question_button {
+    .formfield,
+    label {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
         margin-top: 30px;
         width: 400px;
-        height: 100px;
+        height: 130px;
         border: 0;
-        outline: none;
         background-color: white;
         color: black;
         font-size: 20px;
         font-weight: 1000;
     }
-    .Question_button:hover {
+    input[type='radio'] {
+        display: none;
+    }
+    .formfield,
+    label:hover {
         cursor: pointer;
     }
     .progress {
