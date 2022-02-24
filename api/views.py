@@ -14,11 +14,12 @@ class vj:
 @api_view(['GET'])
 def index(request):
     api_urls = {
-        'List' : '/jsonlist/',
-        'Detail' : '/jsonview/<str:pk>/',
-        'Create' : '/Jsoninsert/',
-        'Update' : '/Jsonupdate/<str:pk>/',
-        'Delete' : '/Jsondelete/<str:pk>',
+        'Data' : 'que , sep , mbti ,cho',
+        'List' : '/Datalist/',
+        'Detail' : '/Dataview/<str:pk>/',
+        'Create' : '/Datainsert/',
+        'Update' : '/Dataupdate/<str:pk>/',
+        'Delete' : '/Datadelete/<str:pk>',
     }
     
     return Response(api_urls)

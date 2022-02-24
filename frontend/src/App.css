@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Cafe24Ohsquareair";
+  font-weight: bold;
+  src: url("./fonts/Cafe24Ohsquareair.ttf")
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Cafe24Simplehae";
+  src: url("./fonts/Cafe24Simplehae.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url("./fonts/Cafe24Ssurround.ttf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("./fonts/Cafe24SsurroundAir.ttf");
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "NanumSquareL";
+  src: url("./fonts/NanumSquareL.otf");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: "NanumSquareEB";
+  src: url("./fonts/NanumSquareEB.ttf");
+}
+
+@font-face {
+  font-family: "NanumSquareB";
+  src: url("./fonts/NanumSquareB.ttf");
 }
