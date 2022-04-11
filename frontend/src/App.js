@@ -4,7 +4,6 @@ import Result from "./component/Result";
 import Question from "./component/question";
 import Main from "./component/main"
 
-
 const App = () => {
     return (
         <Routes>
@@ -12,6 +11,7 @@ const App = () => {
             <Route path="/question" element={<Question/>} />
             <Route exact path="/result" element={<Result/>} />
         </Routes>
+        
     ) 
 }
 

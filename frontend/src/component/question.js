@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { DIV, BODY } from '../style';
+import { DIV, BODY } from './style';
 import axios from 'axios';
 import {
     BrowserRouter,
@@ -12,11 +12,12 @@ import Result from './Result';
 
 const Question = () => {
     const navigate = useNavigate();
-    const result = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 }; // 'e','f'
-    let check_cnt = 1;
+    let result = { 'E': 0, 'I': 0, 'S': 0, 'N': 0, 'T': 0, 'F': 0, 'J': 0, 'P': 0 }; // 'e','f'
+    let check_cnt = 0;
     const final_result = useRef('');
     const [title, setTitle] = useState('');
     const [title2, setTitle2] = useState('');
+    let checkMbti = [];
 
     useEffect(() => {
         const clickAPI = async () => {
@@ -29,28 +30,24 @@ const Question = () => {
 
     const handleClick = (e) => {
         check_cnt++;
+        if(checkMbti[check_cnt]!=null && check_cnt===12){
+            result[checkMbti[check_cnt]]--
+        }
+        console.log(check_cnt)
         const currentQuestion = e.target.parentElement.parentElement;
         const nextQuestion = currentQuestion.nextSibling;
-        
+
         const questions = document.querySelectorAll('.questionWrapper');
         const otherQuestions = Array.from(questions).filter(
             (el) => el !== nextQuestion
         );
 
-        if (check_cnt !== 13) {
-            // 1번 다음 질문 display flex
-            nextQuestion.style.display = 'flex';
-            // 2번 다음 질문 제외하고 모두 display none
-            otherQuestions.forEach((el) => (el.style.display = 'none'));
-        }
+        checkMbti[check_cnt] = e.target.value;
+        result[e.target.value]++;
 
-        if (result[e.target.value] == 0) {
-            result[e.target.value] = 1;
-        } else {
-            result[e.target.value]++;
-        }
-
-        if (check_cnt === 13) {
+        if (check_cnt === 12) {
+            final_result.current='';
+            check_cnt = 11;
             if (result['E'] > result['I']) {
                 final_result.current += 'E';
             } else {
@@ -71,39 +68,71 @@ const Question = () => {
             } else {
                 final_result.current += 'P';
             }
-            console.log(final_result.current);
+            console.log(result)
+            return;
+        }
+        if (check_cnt !== 12) {
+            // 1번 다음 질문 display flex
+            nextQuestion.style.display = 'flex';
+            // 2번 다음 질문 제외하고 모두 display none
+            otherQuestions.forEach((el) => (el.style.display = 'none'));
         }
     };
-    
+
     const handleSubmit = (e) => {
-        if(final_result.current === ""){
-            alert("설문지 대답 클릭 후 제출해주세요")
+        if (final_result.current === '') {
+            alert('설문지 대답 클릭 후 제출해주세요'); 
             return;
         }
         navigate('/result?value=' + final_result.current);
     };
-    
+
     const returnBack = (e) => {
-        
         const target = e.currentTarget;
-        const a = e.target.parentElement.parentElement.id
+        let index = e.target.parentElement.parentElement.id.replace(
+            /[^0-9]/g,
+            ''
+        );
+
+        if (!index) {
+            index =
+                e.target.parentElement.parentElement.parentElement.id.replace(
+                    /[^0-9]/g,
+                    ''
+                );
+            if (!index) {
+                console.error('index값이 없습니다.');
+            }
+        }
+
         if (target.id === 'back_question1') {
-            navigate("/")
-            return
+            navigate('/');
+            return;
         }
         // 2. target == display = none >> target.id - 1 question1 >> display flex
-        for(let i =2; i<13; i++){
-             if(a[8] === i){
-                const currentQuestion = e.target.parentElement.parentElement;
-                const previousQuestion = currentQuestion.previousSibling;       
+        else {
+             result[checkMbti[check_cnt]]--
+             console.log(result)
+             check_cnt--;
+            console.log(check_cnt)
+            if (parseInt(index) === 12) {
+                const currentQuestion = e.target.parentElement.parentElement.parentElement;
+                const previousQuestion = currentQuestion.previousSibling;
                 currentQuestion.style.display = 'none';
                 previousQuestion.style.display = 'flex';
-                 console.log(a[8])
                 return;
+            }
+            for (let i = 2; i < 12; i++) {
+                if (parseInt(index) === i) {
+                    const currentQuestion = e.target.parentElement.parentElement;
+                    const previousQuestion = currentQuestion.previousSibling;
+                    currentQuestion.style.display = 'none';
+                    previousQuestion.style.display = 'flex';
+                    return;
+                }
+            }
         }
-        }
-       
-    }
+    };
 
     return (
         <>
@@ -114,6 +143,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'flex' }}
                     >
+                        
                         <span id='title'>01 / 12</span>
 
                         <span id='content'>
@@ -153,20 +183,24 @@ const Question = () => {
                                 </span>
                             </label>
                         </div>
-                            <div id = "back_question1" className='back' onClick={returnBack}>
-                                <img
-                                    src='img/before.png'
-                                    width='85px'
-                                    height='22px'
-                                ></img>
-                            </div>
+                        <div
+                            id='back_question1'
+                            className='back'
+                            onClick={returnBack}
+                        >
+                            <img
+                                src='img/before.png'
+                                width='85px'
+                                height='22px'
+                            ></img>
+                        </div>
                     </DIV>
                     <DIV
                         id='question2'
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>02/12</span>
+                        <span id='title'>02 / 12</span>
 
                         <span id='content'>
                             놀이동산을 가기 일주일 전,
@@ -220,7 +254,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>03/12</span>
+                        <span id='title'>03 / 12</span>
 
                         <span id='content'>
                             놀이동산을 가기 하루 전,
@@ -274,7 +308,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>04/12</span>
+                        <span id='title'>04 / 12</span>
 
                         <span id='content'>
                             관람차를 타고
@@ -326,7 +360,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>05/12</span>
+                        <span id='title'>05 / 12</span>
 
                         <span id='content'>
                             놀이공원에서 혼자 울고 있는
@@ -380,7 +414,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>06/12</span>
+                        <span id='title'>06 / 12</span>
 
                         <span id='content'>
                             무섭기로 소문이 자자한
@@ -434,7 +468,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>07/12</span>
+                        <span id='title'>07 / 12</span>
 
                         <span id='content'>
                             놀이 기구 줄을 기다리면서 친구가
@@ -486,7 +520,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>08/12</span>
+                        <span id='title'>08 / 12</span>
 
                         <span id='content'>
                             예약해 놓은 놀이 기구가 있는데
@@ -539,7 +573,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>09/12</span>
+                        <span id='title'>09 / 12</span>
 
                         <span id='content'>
                             매점 지갑 분실 사건의 범인이
@@ -592,7 +626,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>10/12</span>
+                        <span id='title'>10 / 12</span>
 
                         <span id='content'>
                             놀이공원에서 재밌게 놀고 난 후
@@ -643,7 +677,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>11/12</span>
+                        <span id='title'>11 / 12</span>
 
                         <span id='content'>
                             어찌어찌 2차로 오게 된 나,
@@ -696,7 +730,7 @@ const Question = () => {
                         className='questionWrapper'
                         style={{ display: 'none' }}
                     >
-                        <span id='title'>12/12</span>
+                        <span id='title'>12 / 12</span>
 
                         <span id='content'>
                             2차에서 친구의 지인이
@@ -744,15 +778,17 @@ const Question = () => {
                                     height='22px'
                                 ></img>
                             </div>
-                           
-                            <div className='submit' onClick={handleSubmit}>
+
+                            <div
+                                className='final_before'
+                                onClick={handleSubmit}
+                            >
                                 <img
                                     src='img/submit.png'
                                     width='85px'
                                     height='22px'
                                 ></img>
                             </div>
-                                
                         </div>
                     </DIV>
                 </BODY>

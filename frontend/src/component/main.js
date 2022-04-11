@@ -1,21 +1,29 @@
 import { useState, useEffect } from 'react';
-import { BODY, Start } from '../style';
+import { BODY, Start } from './style';
 import { Link } from 'react-router-dom';
-// background-size: 알아보기 깨지는걸 방지
-// 인원참여는 백엔드 api를 통해 불러오기
+import '../App.css'
+import KakaoMain from './kakaoMain.js';
+
 const Main = () => {
     return (
             <BODY>
                 <Start>
-                    <span id="ImageLetter">지금까지 총 00,000명이 참여했어요!</span> 
+                    <img src='img/background_top.png' width='500' height='500' class="top"></img>
+                    <div className='title'>
+                    <img src='img/title.png' width='400' height='180' class="image"></img>
+                       
                         <Link to='/question'>
-                            <div>
-                                <img src='img/test.png' width='320' height='100' ></img>
-                            </div>  
+                                <img src='img/test.png' width='320' height='100' class="button_start" ></img>
                         </Link>
-                    <Link to='/result'>
-                           <img src='img/share.png' width='320' height='100'></img>
-                        </Link>
+                        <KakaoMain>
+                        <img src='img/share.png' width='320' height='100' class="button_share">
+                        </img>
+                        </KakaoMain>
+                           
+                    </div>
+                    <img src='img/background_bottom.png' width='500' height='500' class="bottom">
+                    
+                    </img>
                 </Start>
             </BODY>
     );

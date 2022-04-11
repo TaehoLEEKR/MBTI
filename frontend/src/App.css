@@ -1,3 +1,8 @@
+html,body, #root{
+    height : 100%;
+}
+
+
 @font-face {
   font-family: "Cafe24Ohsquareair";
   font-weight: bold;
