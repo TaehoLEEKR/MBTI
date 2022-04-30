@@ -25,26 +25,7 @@ export const Start = styled.div`
     .image{
     margin-bottom :100px;
     }
-    
-    .bottom{
-    }
-    
-    
-    
-    
-    @media only screen and (min-width: 576px) {
-   .top{
-       height : 50%;
-   }
-   .title{
-   height : 50%;
-   }
-   .bottom{
-   height : 50%;
-   }
-    }
-    
- 
+
 `;
 
 
@@ -56,8 +37,6 @@ export const DIV = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    
 
     #title{
         margin-top: 244px;
@@ -268,21 +247,7 @@ export const Final = styled.div`
     color : white;
     
     }
-    
-    
-    @media only screen and (min-width: 576px) {
-   .top{
-       height : 50%;
-   }
-   .title{
-   height : 50%;
-   }
-   .bottom{
-   height : 50%;
-   }
-    }
-    
- 
+
 `;
 
 export const Button = styled.button`

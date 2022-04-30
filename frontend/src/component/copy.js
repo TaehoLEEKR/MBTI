@@ -26,7 +26,7 @@ alert("클립보드에 복사되었습니다.");
 };
 return (
     <Button>
-<button onClick={() => doCopy(`https://react-daeho.run.goorm.io/result?value=${props.finalResult}`)}>{props.children}</button>
+<button onClick={() => doCopy(`https://animal-rides-mbti.run.goorm.io/result?value=${props.finalResult}`)}>{props.children}</button>
     </Button>
 );
 }

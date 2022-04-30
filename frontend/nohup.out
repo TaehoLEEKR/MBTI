@@ -1,0 +1,75 @@
+yarn run v1.22.17
+$ react-scripts start
+(node:5940) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:5940) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://172.17.0.25:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+assets by path static/media/ 11.6 MiB
+  asset static/media/Cafe24SsurroundAir.2477297bc14b8b2ed082.ttf 7.21 MiB [emitted] [immutable] [from: src/fonts/Cafe24SsurroundAir.ttf] (auxiliary name: main)
+  asset static/media/Cafe24Ohsquareair.94cdfdfdef9b4a197116.ttf 1.78 MiB [emitted] [immutable] [from: src/fonts/Cafe24Ohsquareair.ttf] (auxiliary name: main)
+  asset static/media/Cafe24Simplehae.480b945be5995c948a66.ttf 1.33 MiB [emitted] [immutable] [from: src/fonts/Cafe24Simplehae.ttf] (auxiliary name: main)
+  asset static/media/Cafe24Ssurround.a5df3ce700ca6c98875c.ttf 1.27 MiB [emitted] [immutable] [from: src/fonts/Cafe24Ssurround.ttf] (auxiliary name: main)
+  asset static/media/NanumSquareB.31d6cfe0d16ae931b73c.ttf 0 bytes [emitted] [immutable] [from: src/fonts/NanumSquareB.ttf] (auxiliary name: main)
+  asset static/media/NanumSquareEB.31d6cfe0d16ae931b73c.ttf 0 bytes [emitted] [immutable] [from: src/fonts/NanumSquareEB.ttf] (auxiliary name: main)
+  asset static/media/NanumSquareL.31d6cfe0d16ae931b73c.otf 0 bytes [emitted] [immutable] [from: src/fonts/NanumSquareL.otf] (auxiliary name: main)
+asset static/js/bundle.js 1.97 MiB [emitted] (name: main) 1 related asset
+asset index.html 3.08 KiB [emitted]
+asset asset-manifest.json 870 bytes [emitted]
+cached modules 1.77 MiB (javascript) 11.6 MiB (asset) 28.2 KiB (runtime) [cached] 182 modules
+webpack 5.68.0 compiled successfully in 1533 ms
+yarn run v1.22.17
+$ react-scripts start
+(node:8425) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8425) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://172.17.0.25:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+assets by path static/media/ 11.6 MiB
+  asset static/media/Cafe24SsurroundAir.2477297bc14b8b2ed082.ttf 7.21 MiB [emitted] [immutable] [from: src/fonts/Cafe24SsurroundAir.ttf] (auxiliary name: main)
+  asset static/media/Cafe24Ohsquareair.94cdfdfdef9b4a197116.ttf 1.78 MiB [emitted] [immutable] [from: src/fonts/Cafe24Ohsquareair.ttf] (auxiliary name: main)
+  asset static/media/Cafe24Simplehae.480b945be5995c948a66.ttf 1.33 MiB [emitted] [immutable] [from: src/fonts/Cafe24Simplehae.ttf] (auxiliary name: main)
+  asset static/media/Cafe24Ssurround.a5df3ce700ca6c98875c.ttf 1.27 MiB [emitted] [immutable] [from: src/fonts/Cafe24Ssurround.ttf] (auxiliary name: main)
+  asset static/media/NanumSquareB.31d6cfe0d16ae931b73c.ttf 0 bytes [emitted] [immutable] [from: src/fonts/NanumSquareB.ttf] (auxiliary name: main)
+  asset static/media/NanumSquareEB.31d6cfe0d16ae931b73c.ttf 0 bytes [emitted] [immutable] [from: src/fonts/NanumSquareEB.ttf] (auxiliary name: main)
+  asset static/media/NanumSquareL.31d6cfe0d16ae931b73c.otf 0 bytes [emitted] [immutable] [from: src/fonts/NanumSquareL.otf] (auxiliary name: main)
+asset static/js/bundle.js 1.97 MiB [emitted] (name: main) 1 related asset
+asset index.html 3.08 KiB [emitted]
+asset asset-manifest.json 870 bytes [emitted]
+cached modules 1.77 MiB (javascript) 11.6 MiB (asset) 28.2 KiB (runtime) [cached] 182 modules
+webpack 5.68.0 compiled successfully in 1518 ms
+Compiling...
+Compiled successfully!
+assets by status 11.6 MiB [cached] 7 assets
+assets by path . 1.98 MiB
+  assets by info 387 bytes [immutable]
+    asset main.1ee433bf786e5de43a92.hot-update.js 359 bytes [emitted] [immutable] [hmr] (name: main) 1 related asset
+    asset main.1ee433bf786e5de43a92.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+  asset static/js/bundle.js 1.97 MiB [emitted] (name: main) 1 related asset
+  asset index.html 3.08 KiB [emitted]
+  asset asset-manifest.json 995 bytes [emitted]
+Entrypoint main 1.97 MiB (13.5 MiB) = static/js/bundle.js 1.97 MiB main.1ee433bf786e5de43a92.hot-update.js 359 bytes 9 auxiliary assets
+cached modules 1.77 MiB (javascript) 11.6 MiB (asset) [cached] 168 modules
+runtime modules 28.2 KiB 13 modules
+./src/component/kakao.js 3.25 KiB [built]
+webpack 5.68.0 compiled successfully in 1648 ms

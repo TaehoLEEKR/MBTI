@@ -14,18 +14,18 @@ class KakaoMain extends Component {
       content: {
         title: 'MBTI 사이트',
         description: '#MBTI #동물 #놀이기구 #알잘딱깔센',
-        imageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+        imageUrl: 'https://proxy.goorm.io//service/6203c7b304ddbfd2b4a26683_dbNhf4SBZOLzGxZ56SF.run.goorm.io/9080//file/load/result_top.png?path=d29ya3NwYWNlJTJGTUJUSV9BUEklMkZmcm9udGVuZCUyRnB1YmxpYyUyRmltZyUyRnJlc3VsdF90b3AucG5n&docker_id=dbNhf4SBZOLzGxZ56SF&secure_session_id=WfAyLtIXSt0CMtv_9kk84CupWb5NAUn_',
         link: {
-          mobileWebUrl: 'https://react-daeho.run.goorm.io',
-          webUrl: 'https://react-daeho.run.goorm.io'
+          mobileWebUrl: 'https://animal-rides-mbti.run.goorm.io/',
+          webUrl: 'https://animal-rides-mbti.run.goorm.io/'
         }
       },
       buttons: [
         {
           title: '웹으로 보기',
           link: {
-            mobileWebUrl: 'https://react-daeho.run.goorm.io',
-            webUrl: 'https://react-daeho.run.goorm.io'
+            mobileWebUrl: 'https://animal-rides-mbti.run.goorm.io/',
+            webUrl: 'https://animal-rides-mbti.run.goorm.io/'
           }
         },
       ]

@@ -16,7 +16,6 @@ const Question = () => {
     let check_cnt = 0;
     const final_result = useRef('');
     const [title, setTitle] = useState('');
-    const [title2, setTitle2] = useState('');
     let checkMbti = [];
 
     useEffect(() => {
